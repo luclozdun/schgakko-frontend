@@ -14,3 +14,48 @@
   display: flex;
   align-items: center;
 }
+
+input.placeholder{
+  box-shadow: none;
+  padding: 0.6em 0.6em;
+  border-radius: 0.5em;
+  outline: none;
+}
+
+div.label{
+  display: inline-flex;
+  background: lightblue;
+  position: relative;
+  align-items: center;
+  font-size: 1.5em;
+  color: rgb(0, 0, 0);
+}
+
+div.label > input{
+  position: relative;
+  padding: 0.45em 0.5em;
+  font-size: inherit;
+  color: inherit;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.726) 0 0 2px 0px;
+}
+
+div.label > label{
+  padding: 0 0.5em;
+  position: absolute;
+  pointer-events: none;
+  font-size: inherit;
+}
+
+input:focus {
+  outline: none;
+}
+
+div.label > input:focus + label,
+div.label > input:valid + label
+{
+  padding: 0;
+  font-size: 0.5em;
+  transition: 0.5s all ease-in-out;
+  transform:translateY(-2.6em);
+}
